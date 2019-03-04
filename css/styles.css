@@ -1,0 +1,257 @@
+@font-face {
+    font-family: 'museo_sans_rounded100';
+    src: url('museosansrounded-100.eot');
+    src: url('museosansrounded-100.eot?#iefix') format('embedded-opentype'),
+         url('museosansrounded-100.woff2') format('woff2'),
+         url('museosansrounded-100.woff') format('woff'),
+         url('museosansrounded-100.ttf') format('truetype'),
+         url('museosansrounded-100.svg#museo_sans_rounded100') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@import url(//db.onlinewebfonts.com/c/155263ca437b4d97451a5adbddf19f82?family=MuseoSansW01-Rounded100);
+:root {
+	--font: 'museo_sans_rounded100', sans-serif;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	outline: none;
+	box-sizing: border-box;
+	transition: all .3s ease-in-out;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+body, html {
+	min-height: 100%;
+	width: 100%;
+}
+
+.clear::after, .clear::before {
+	content: " ";
+	display: table;
+}
+
+.clear::after {
+	clear: both;
+}
+
+/* Main Styles */
+
+body {
+	font-family: var(--font);
+	background: url('../images/bg.png') no-repeat top center;
+	position: relative;
+	min-height: 1000px;
+	height: 100%;
+	padding-top: 1px;
+}
+
+body::before, body::after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: -1
+}
+
+body::before {
+	right: : 0;
+	top: 0;
+	background: url('../images/star_dust1.png') no-repeat top center;
+	opacity: .25;
+}
+
+body::after {
+	right: : 0;
+	top: 0;
+	background: url('../images/star_dust2.png') no-repeat top center;
+	opacity: .56;
+}
+
+
+.container {
+	max-width: 686px;
+	width: 100%;
+	height: 392px;   /* 428 */
+	margin: 0 auto;
+	margin-top: 110px;
+	font-family: var(--font);
+	background: #111a28;
+	position: relative;
+	border-radius: 12px;
+	box-shadow: 0 0 65px 10px rgba(0, 0, 0, .82);
+	padding-top: 1px;
+}
+
+.contrainer__logo {
+	width: 65px;
+	height: 33px;
+	margin: 25px 0 25px 21px;
+}
+
+.container__link {
+	height: 100%;
+	width: 100%;
+}
+
+.item {
+	margin-left: 21px;
+	margin-right: 21px;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: nowrap;
+}
+.item__thumbs {
+	width: 61%;
+	height: 241px;
+	align-self: center;
+
+}
+
+.item__thumbs-img {
+	margin-top: 50px;
+	margin-left: 15px;
+}
+
+.item__slider {
+	margin-top: 60px;
+	display: flex;
+	justify-content: center;
+}
+
+.item__slider--circle {
+	width: 10px;
+	height: 10px;
+	margin-left: 10px;
+	-webkit-border-radius: 50%;
+	        border-radius: 50%;
+	border: 0px solid grey;
+}
+
+.item__slider--circle:nth-child(1) {
+	background: #1f273f;
+}
+
+.item__slider--circle:nth-child(2) {
+	background: #fff;
+}
+
+.item__slider--circle:nth-child(3) {
+	background: #ed3333;
+}
+
+.item__slider--circle:nth-child(4) {
+	background: #29e3ea;
+}
+
+.item__slider--circle:hover, .item__slider--circle-is-active {
+	transform: scale(1.6);
+	border: 1px solid grey;
+}
+
+.item-content {
+	width: 33%;
+	color: #fff;
+	padding-left: 5px;
+	font-family: var(--font);
+}
+
+.item-content__title {
+	font-size: 24px;
+	font-weight: 500;
+	line-height: 24px;
+}
+
+.item-content__title-desc {
+	font-size: 14px;
+	opacity: .54;
+	margin-top: 12px;
+}
+
+.rating {
+	display: flex;
+	margin: 27px 0;
+}
+
+
+.rating__item {
+	font-family: "Font Awesome 5 Free";
+	color: #7f7f7f;
+	font-weight: 600;
+	font-size: 10px;	
+}
+
+.rating__item::before {
+	content: '\f005';
+}
+
+.rating__item--full {
+	color: #f7bf16;
+}
+
+select {
+	width: 68px;
+	height: 30px;
+}
+
+.select-wrapper {
+	padding: 9px 4px 10px 13px;
+	width: 70px;
+	height: 32px;
+	background: #111a28;
+	border: 1px solid;
+	opacity: 1;
+	position: absolute;
+	top: 0;
+	left: 0;
+	pointer-events: none;
+	color: #4f5560;
+	border-color: #4f5560;
+}
+
+
+.select-wrapper img {
+	margin-left: 5px;
+}
+
+.form-wrapper {
+	display: flex;
+	font-size: 14px;
+}
+
+.form-wrapper__left-btn, .form-wrapper__right-btn {
+	position: relative;
+}
+
+.form-wrapper__right-btn {
+	margin-left: 4px;
+}
+
+.form-wrapper__left-btn:hover .select-wrapper, .form-wrapper__right-btn:hover .select-wrapper{
+	background: #202835;
+}
+
+.form-button {
+	margin-top: 38px;
+	width: 184px;
+	background-color: #111a28;
+	border: 1px solid #4f5560;
+	font-family: var(--font);
+	font-size: 14px;
+	padding: 14px 0;
+	color: #4f5560;
+	transition: none;
+}
+
+.form-button:active {
+	background-color: #202835;
+	color: #fff;
+}
